@@ -1,0 +1,19 @@
+Document Object
+
+- It represents a webpage that is loaded in the browser
+- Using document object we can access the elements in HTML page
+- It is loaded inside the window
+- All tags, Elements with attributes in HTML are Document
+- It is part of Both DOM and BOM
+
+
+
+Window Object
+
+
+It is the top most object of the DOM hiearchy
+- It is an Global object
+- It represents the browser windows that displays the content of the webpage
+- This is the first obj that is created that is loaded in the browser
+- All global functions, Objects and variables of JS are member of Window object
+- It is only a part of BOM not DOM
