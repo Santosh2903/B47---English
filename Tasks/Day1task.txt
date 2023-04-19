@@ -1,0 +1,69 @@
+Difference between  HTTP1.1 vs HTTP2
+
+HTTP1.1 
+- It was discovered on 1989 as a communication standard for the WWW
+- This protocol transfers information between a client computer and a web server using GET method
+- using GET method the client computer requests an information to the server via text
+- In response server send an HTML page 
+- Not all the resources are sent in the first call of data
+- The reuqest and response will go back and forth until all the necessary resources are received to render the HTML page
+
+
+HTTP2
+
+- It began as an SPDY protocol and developed by Google primarily
+- This version was created to reduce the latency using compression, Multiplexing and prioritaization
+- This distingusies itself from HTTP1 by Binary framing layer
+- HTTP1 keeps all request and responses in plain text format whereas HTTP2 encapsulates all messages using Binary framing layer
+- An application level API would still create messages in HTTP format
+- But the underlying layer would convert this messages into Binary
+- This helps the web application created before HTTP2 can continue functioning as normal when interacting with new protocol
+
+
+
+Objects:-
+
+Everything in Java is an Object
+- It is represented by {}
+The values can be represented by key:value,
+
+Syntax:
+
+Var obj = {
+    key1:value1,
+    key2:value2,
+    key3:value3,
+    key4:value4,
+}
+
+
+Objects can be accessed using dot operator or square bracker []
+
+For example: conside the below Object
+
+var studentDetails = {
+    Name:"Santosh Kumar",
+    Age:25,
+    Gender:"Male"
+}
+
+To access the keys on the object it can be called using the below term
+
+studentDetails.Name
+studentDetails.Age
+
+or
+
+studentDetails["Name"]
+
+
+Inserting an Key in Object
+
+studentdDetails.emailid = "XYZ@gmail.com"
+
+The above inserts an key value in the Object
+
+
+Deleting an Key in Object
+
+delete studentdDetails.Age
