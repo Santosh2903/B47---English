@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML HTTP request Demo</title>
+</head>
+<body>
+    <script>
+        //step 1
+        //create a XHR object
+        //to interact the server via API
+        //new Keyword
+
+        var request = new XMLHttpRequest()
+
+
+        //Step 2 : Opening an connection
+        // 3 parameters
+        //http method - Get
+        //url = https://restcountries.com/v3.1/all
+
+        request.open('GET',"https://restcountries.com/v3.1/all")
+
+
+        //step 3 : Initiating a bridge between them
+
+        request.send();
+
+        // step 4: Server response
+        // Whenever a page is loaded you give me the data
+        // whenever an event is triggered an action is performed - Onload
+        // Onload is an global event and accepts only Annonymous function
+
+     
+
+        request.onload=function(){
+            var countriesData= JSON.parse(request.response)
+            console.log(countriesData)
+            console.log(countriesData.length)
+            console.log(countriesData[0].area)
+
+            for(i=0;i<countriesData.length;i++){
+                console.log("CountryName- "+countriesData[i].name.common+"Area-"+countriesData[i].area)
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
