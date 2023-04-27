@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // MAP method
+
+       var arr1 = [1,2,3,4,5]
+        var result1 = arr1.map((elements)=>elements*2)
+        console.log(result1)
+        console.log(arr1)
+
+        var arr2 = ["1","2","3","4","5"]
+        var result2 = arr2.map((element)=>parseInt(element))
+        console.log(result2)
+        console.log(arr2)
+
+        //Math methods
+
+        var arr3 = ["1","4","9"]
+        var result3 = arr3.map((element)=>{
+            parseInt(element)
+            Math.sqrt(element)
+            return element
+        }
+            )
+        
+        console.log(result3)
+
+        var students=[
+            {
+                name:'alex',
+                marks:50
+            },
+            {
+                name:'bob',
+                marks:60
+            },
+            {
+                name:'alex',
+                marks:50
+            },
+
+            
+        ]
+        var studentresult = students.map((element)=>element.marks+10)
+        console.log(studentresult)
+
+
+        //Filter method
+
+        var array=[1,2,3,4,5,6]
+        var resultEven = array.filter((element)=>element%2==0)
+        console.log(resultEven)
+
+
+        var resultodd = array.filter((element)=>element%2!==0)
+        console.log(resultodd)
+
+
+        var students2=[
+            {
+                name:'alex',
+                marks:50
+            },
+            {
+                name:'bob',
+                marks:60
+            },
+            {
+                name:'alex',
+                marks:40
+            },
+
+            
+        ]
+
+        var studentresult2 = students2.filter((element)=>element.marks>50)
+        console.log(...studentresult2)
+
+        var studentresult3 = students2.filter((element)=>element.marks>50).map((elements)=>elements.name)
+
+        console.log(...studentresult3)
+
+
+        //reduce Method
+
+        var arr = [100,20,30,40]
+        var reduceResult = arr.reduce((acc,element)=>acc+element)
+        console.log(reduceResult)
+
+        var reduceresult2 = arr.reduce((acc,element)=>acc*element,100)
+        console.log(reduceresult2)
+
+
+        var students3=[
+            {
+                name:'alex',
+                marks:100
+            },
+            {
+                name:'bob',
+                marks:100
+            },
+            {
+                name:'alex',
+                marks:100
+            },
+
+            
+        ]
+
+        var studentresult4 = students3.map((elements)=>elements.marks).reduce((acc,element)=>acc+element)//using map and reduce
+        var studentresult5 = students3.reduce((acc,elements)=>acc+elements.marks,0)//using only reduce method
+        console.log(studentresult4)
+        console.log(studentresult5)
+
+
+        //WOrking on all methods
+
+        var MRFdemo = [1,2,3,4]
+        var MRFdemoResult = MRFdemo.filter((elements)=>elements%2==0).map((elements)=>elements*2).reduce((acc,elemets)=>acc+elemets)
+        console.log(MRFdemoResult)
+
+
+    </script>
+</body>
+</html>
